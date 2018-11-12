@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import posed from "react-pose";
 import photo from "./img/david.jpg";
 
 const Img = styled.img`
@@ -18,7 +19,31 @@ const Img = styled.img`
     max-height: 200px;
   }
 `;
+const AnimImg = posed(Img)({
+  enter: {
+    rotate: "352deg",
+    opacity: 1,
+    y: 0,
+    transition: {
+      default: () => ({
+        duration: 1000,
+        ease: "easeInOut"
+      })
+    }
+  },
+  exit: {
+    rotate: "200deg",
+    opacity: 0,
+    y: -100,
+    transition: {
+      default: () => ({
+        duration: 1000,
+        ease: "easeInOut"
+      })
+    }
+  }
+});
 
-const Photo = () => <Img src={photo} />;
+const Photo = () => <AnimImg src={photo} initialPose="exit" pose="enter" />;
 
 export default Photo;

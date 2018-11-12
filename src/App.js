@@ -17,6 +17,7 @@ const Container = styled.div`
   font-size: calc(10px + 2vmin);
   color: white;
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
 `;
 
 const App = () => (
