@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Theme from "./providers/Theme";
+import Photo from "./Photo";
+import Name from "./Name";
+import Age from "./Age";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -13,13 +16,15 @@ const Container = styled.div`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
 `;
 
 const App = () => (
   <Theme>
     <Container>
-      <p>David</p>
+      <Photo />
+      <Name />
+      <Age />
     </Container>
   </Theme>
 );
